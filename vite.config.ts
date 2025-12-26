@@ -5,7 +5,7 @@ import path from 'path'
 // Configuração para GitHub Pages
 export default defineConfig({
   plugins: [react()],
-  base: '/minha-agenda/', // Nome do seu repositório
+  base: '/minha-agenda/',
   
   resolve: {
     alias: {
