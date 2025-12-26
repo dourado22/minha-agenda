@@ -2,10 +2,9 @@ export interface Task {
   id: string
   title: string
   description: string
-  date: Date
-  completed: boolean
+  date: string
   priority: 'low' | 'medium' | 'high'
   category: string
+  completed: boolean
+  createdAt: string
 }
-
-export type ViewMode = 'day' | 'week' | 'month'

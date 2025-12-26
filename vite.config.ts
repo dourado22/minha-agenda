@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/minha-agenda-diaria/', // ← NOME DO SEU REPOSITÓRIO
+  base: '/', // ← MUDE PARA '/' PARA DESENVOLVIMENTO LOCAL
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -21,5 +21,9 @@ export default defineConfig({
         }
       }
     }
+  },
+  server: {
+    port: 5173,
+    host: true
   }
 })
