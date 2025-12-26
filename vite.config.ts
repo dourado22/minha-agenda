@@ -1,18 +1,18 @@
-# Atualize o vite.config.ts
-@'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
-// IMPORTANTE: Para GitHub Pages, sempre use o nome do repositório
+// Configuração para GitHub Pages
 export default defineConfig({
   plugins: [react()],
-  base: '/minha-agenda-diaria/', // ← NOME DO SEU REPOSITÓRIO
+  base: '/minha-agenda-diaria/', // Nome do seu repositório
+  
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
+  
   build: {
     outDir: 'dist',
     sourcemap: false,
@@ -25,10 +25,10 @@ export default defineConfig({
       }
     }
   },
-  // Configuração para desenvolvimento local
+  
+  // Configuração para desenvolvimento
   server: {
     port: 5173,
     host: true
   }
 })
-'@ | Out-File -FilePath "vite.config.ts" -Encoding UTF8
